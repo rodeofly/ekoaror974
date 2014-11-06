@@ -1,0 +1,35 @@
+<h1>Listing exercices</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Content</th>
+      <th>Equation</th>
+      <th>Weight</th>
+      <th>Solution</th>
+      <th>Star</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @exercices.each do |exercice| %>
+      <tr>
+        <td><%= exercice.name %></td>
+        <td><%= exercice.content %></td>
+        <td><%= exercice.equation %></td>
+        <td><%= exercice.weight %></td>
+        <td><%= exercice.solution %></td>
+        <td><%= exercice.star %></td>
+        <td><%= link_to 'Show', exercice %></td>
+        <td><%= link_to 'Edit', edit_exercice_path(exercice) %></td>
+        <td><%= link_to 'Destroy', exercice, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Exercice', new_exercice_path %>

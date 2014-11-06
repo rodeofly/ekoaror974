@@ -1,0 +1,41 @@
+<p id="notice"><%= notice %></p>
+
+<div id="panel" class="">
+  <div id="panel_top" class="panel"></div>
+  <div id="panel_bottom" class="panel"></div>
+  <div id="enonce" title="Énoncé"></div>
+</div> 
+
+<div id="user_menu">
+  <div id="select_opener" class="menu_item">
+    <select name="Exercices" id="exercices"></select>
+  </div>
+
+  <div id="menu_parametres" class="menu_item">&nbsp;
+    <div id="parametres" title="Paramètres">
+      <label for="checkbox_aide">Aide</label>
+      <input type="checkbox" id="checkbox_aide" class="checkbox"  />
+      <label for="checkbox_piege">Pièges</label>
+      <input type="checkbox" id="checkbox_piege" class="checkbox" checked/>
+      <label for="checkbox_rotate">Tourner</label>
+      <input type="checkbox" id="checkbox_rotate" class="checkbox"  />
+    </div>
+  </div>
+
+  <div id="trash" class="menu_item">&nbsp;</div>
+
+  <div id="check" class="menu_item">&nbsp;</div>
+</div>
+<!-- 
+Pour rajouter un exercice, il suffit de rajouter des divs en prenant soin de modifier l'id, les valeurs data-membre et data-solution et l'enoncé en respectant les conventions suivantes:
+
+
+
+--> 
+
+<div id="<%= @exercice.name %>" class="exercice equation" data-membre="<%= @exercice.weight %>" data-solution="<%= @exercice.solution %>">
+  <%= @exercice.content %>
+</div>
+
+<%= link_to 'Edit', edit_exercice_path(@exercice) %> |
+<%= link_to 'Back', exercices_path %>

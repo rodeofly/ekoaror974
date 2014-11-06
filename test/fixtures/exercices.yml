@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  content: MyText
+  equation: MyString
+  weight: 1.5
+  solution: MyString
+  star: 1
+
+two:
+  name: MyString
+  content: MyText
+  equation: MyString
+  weight: 1.5
+  solution: MyString
+  star: 1
